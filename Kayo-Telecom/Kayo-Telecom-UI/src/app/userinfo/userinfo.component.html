@@ -1,9 +1,33 @@
-<div class="jumbotron text-center">
-    <h1>Profile</h1>
-    <hr>
-    <h2>Name: {{ user.firstName }} {{ user.lastName }}</h2>
-    <h2>Phone: {{ user.phoneNumber }}</h2>
-    <h2>Email: {{ user.email }} </h2>
-    <h2>Subscriptions: {{ user.subscription }}</h2>
+<br>
+<br>
+<h1 class="title">Profile</h1>
 
+
+<div class="jumbotron text-center">
+        <form [formGroup]="userForm" (ngSubmit)="save()">
+
+            <div class="text-center">
+                <label for="first-name">Device Name: </label><br>
+                <input id="first-name" type="text" formControlName="firstName" required />
+                <br>
+            </div>
+            <div class="text-center">
+                <label for="last-name">Device Holder:</label><br>
+                <input id="last-name" type="text" formControlName="lastName" required />
+                <br>
+            </div>
+            <div class="text-center">
+                <label for="email">Email: </label><br>
+                <input id="email" type="text" formControlName="email" required />
+                <br>
+            </div>
+
+            <div class="text-center">
+                <label for="password">Password: </label><br>
+                <input id="password" type="password" formControlName="password" required />
+                <br>
+            </div>
+
+            <button class="text-center" type="submit" [disabled]="!userForm.valid">Save</button>
+        </form>
 </div>

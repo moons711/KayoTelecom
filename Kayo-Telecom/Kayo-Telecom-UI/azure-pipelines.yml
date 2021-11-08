@@ -1,0 +1,30 @@
+# Node.js with Angular
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.15'
+  displayName: 'Install Node.js'
+
+- script: |
+    nvm install 14.15
+    sudo npm install -g @angular/cli
+    npm install
+    ng build --prod --localize
+  displayName: 'npm install and build'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(8)(14a06612-86cc-42ae-aa77-9f50fd3763ed)'
+    appType: 'webApp'
+    WebAppName: 'Kayo-Telecom-Angular'
+    packageForLinux: 'dist/Kayo-Telecom-UI'

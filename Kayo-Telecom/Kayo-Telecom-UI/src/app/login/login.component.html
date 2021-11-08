@@ -1,15 +1,16 @@
-<div class="jumbotron">
-    <h2 class="text-center">Login</h2>
+<h1 class="title">Login</h1>
+
+<div class="jumbotron text-center">
     <form id="login-form" (ngSubmit)="login(); loginForm.reset()" #loginForm >
-        <div class="form-group">
-            <label for="Username">Email/Phone Number</label>
+        <div class="text-center">
+            <label for="Username">Email</label>
             <input [(ngModel)]="username" name="Username" class="form-control" id="Username" type="text" required maxlength="30" #Username="ngModel" />
             <div class="alert" *ngIf="Username.invalid && (Username.dirty || Username.touched)">
                 <div *ngIf="Username.errors?.required">First Name is required</div>
                 <div *ngIf="Username.errors?.maxlength">First Name cannot be more than 30 characters</div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="text-center">
             <label for="Password">Password</label>
             <input [(ngModel)]="password" name="Password" class="form-control" id="Password" type="password" required maxlength="50" #Password="ngModel" />
             <div class="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)">

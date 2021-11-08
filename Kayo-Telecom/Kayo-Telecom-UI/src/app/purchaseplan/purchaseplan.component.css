@@ -1,16 +1,21 @@
 li {
-    list-style: none;
+  list-style: none;
 }
 ul{
-    width: auto;
-    margin: auto;
-    display:inline-flex;
+  width: auto;
+  margin: auto;
+  display:inline-flex;
 }
 .plan{
-    margin: 2em;
-    padding: 2em;
-    border-style: solid;
-    border-radius: 8px;
-    color:#aaabc5;
-    background-color: #343A40;
+  margin: 2em;
+  padding: 4em;
+  width: 350px;
+  height: 400px;
+  border-radius: 8px;
+  color:#c4c5e0;
+  background-color: #485058;
+  box-shadow: 1px 1px 10px grey;
+
 }
+
+

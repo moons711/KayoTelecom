@@ -24,20 +24,15 @@ export class LoginComponent implements OnInit {
       if(data != -1){
         localStorage.setItem('loggedOn', 'true');
         localStorage.setItem('userID',data.toString());
+        this.router.navigateByUrl('/').then(() => {
+          window.location.reload();
+        });
       } else {
         localStorage.setItem('loggedOn','false');
+        alert("Incorrect Username or Password");
+        window.location.reload();
       }
     });
-
-    if(localStorage.getItem('loggedOn') == 'true'){
-      this.router.navigateByUrl('/')
-      .then(() => {
-        window.location.reload();
-      });
-    } else {
-      alert("Incorrect Username or Password");
-      window.location.reload();
-    }
   }
 
 }

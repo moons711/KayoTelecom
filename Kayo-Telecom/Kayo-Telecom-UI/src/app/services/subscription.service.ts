@@ -13,20 +13,22 @@ export class SubscriptionService {
 
   constructor(private httpClient: HttpClient) { }
 
-  find(subscription: Subscription): Observable<Subscription> {
-    return this.httpClient.get<Subscription>(this.url + `/${subscription.id}`);
+  find(userId:number): Observable<Subscription[]> {
+    return this.httpClient.get<Subscription[]>(this.url + `/user/${userId}`);
   }
+
+
 
   putSubscription(subscription: Subscription): Observable<number> {
     return this.httpClient.put<number>(this.url + `/${subscription.id}`, subscription);
   }
 
-  save(subscription: Subscription): Observable<number> {
-    return this.httpClient.post<number>(this.url, subscription);
+  save(userId:number, planId:number): Observable<number> {
+
+    return this.httpClient.post<number>(this.url, {'userId':userId, 'planId':planId});
   }
 
-  remove(subscription: Subscription):Observable<number> {
-    return this.httpClient.delete<number>(this.url + `/${subscription.id}`);
+  remove(subscriptionId: number):Observable<number> {
+    return this.httpClient.delete<number>(this.url + `/${subscriptionId}`);
   }
-
 }

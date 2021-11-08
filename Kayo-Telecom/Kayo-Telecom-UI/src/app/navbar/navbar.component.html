@@ -1,27 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="navbar-collapse" id="navbar">
-    <a class="navbar-brand" href="#"> Kayo Telecom </a>
+    <a class="navbar-brand image" href="#">     <img class="homeimage" src="assets/logo2.png">    </a>
+
+    <a class="navbar-brand" href="#" i18n="Navbar Title|Company Name@@kayoTitle"> Kayo Telecom </a>
     <ul class="navbar-nav ms-auto">
       <li class="nav-item" *ngIf="!loggedIn">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        <a class="nav-link" routerLink="/login" routerLinkActive="active" i18n="Navbar Login|Login@@kayoLogin">Login</a>
       </li>
       <li class="nav-item" *ngIf="!loggedIn">
-        <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        <a class="nav-link" routerLink="/register" routerLinkActive="active" i18n="Navbar Register|Register@@kayoRegister">Register</a>
+      </li>
+      <li class="nav-item" *ngIf="loggedIn">
+        <a class="nav-link" routerLink="/userinfo" routerLinkActive="active" i18n="Navbar Profile|Profile@@kayoProfile">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/purchaseplan" routerLinkActive="active">Plans</a>
+        <a class="nav-link" routerLink="/purchaseplan" routerLinkActive="active" i18n="Navbar Plans|Plan@@kayoPlans">Plans</a>
       </li>
+
       <li class="nav-item" *ngIf="loggedIn" >
-        <a class="nav-link" routerLink="/myaccount" routerLinkActive="active">My Subscriptions</a>
+        <a class="nav-link" routerLink="/myaccount" routerLinkActive="active" i18n="Navbar Subscription|Subscription@@kayoSubscription">My Subscriptions</a>
       </li>
       <li class="nav-item" *ngIf="loggedIn">
-        <a class="nav-link" routerLink="/userinfo" routerLinkActive="active">Profile</a>
-      </li>
-      <li class="nav-item" *ngIf="loggedIn">
-        <a class="nav-link" routerLink="/editdeviceplans" routerLinkActive="active">Edit Devices</a>
-      </li>
-      <li class="nav-item" *ngIf="loggedIn">
-        <a class="nav-link" routerLink="/#" (click)="logout()" routerLinkActive="active">Logout</a>
+        <a class="nav-link" routerLink="/#" (click)="logout()" routerLinkActive="active" i18n="Navbar Logout|Logout@@kayoLogout">Logout</a>
       </li>
     </ul>
   </div>

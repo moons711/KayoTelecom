@@ -8,12 +8,12 @@ import { Device } from '../model/device.model';
 })
 export class DeviceService {
 
-  url = 'https://kayo-telecom-service.azurewebsites.net/api/Devices';
+  url = 'https://kayo-telecom-service.azurewebsites.net/api/devices';
 
   constructor(private httpClient: HttpClient) { }
 
-  find(device:Device):Observable<Device> {
-    return this.httpClient.get<Device>(this.url + `/${device.id}`);
+  find(deviceId:number):Observable<Device[]> {
+    return this.httpClient.get<Device[]>(this.url + `/${deviceId}`);
   }
 
   save(device:Device):Observable<number> {
@@ -24,7 +24,7 @@ export class DeviceService {
     return this.httpClient.put<number>(this.url + `/${device.id}`, device);
   }
 
-  remove(device:Device):Observable<number> {
-    return this.httpClient.delete<number>(this.url + `/${device.id}`);
+  remove(deviceid:number):Observable<number> {
+    return this.httpClient.delete<number>(this.url + `/${deviceid}`);
   }
 }

@@ -1,9 +1,14 @@
-footer {
-    background: linear-gradient(0deg, rgba(135,137,192,1) 0%, rgba(244,250,255,1) 100%);
-}
+
 p {
-    padding-top: 2em;
+  padding-top: 2em;
 }
 .message {
-    padding-top: 35px;
+  padding-top: 35px;
+}
+
+footer {
+background-color: #343a40;
+color: white;
+box-shadow: 1px 1px 10px grey;
+
 }

@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+.jumbotron {
+  background-color:rgb(244, 235, 255);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px grey;
+  font-size: 20px;
+ }
+
+ .jumbotron h2{
+
+   padding-bottom: 50px;
+ }
+
+ .jumbotron h2 span{
+   border-bottom:1px solid #000;
+   padding-bottom: 10px;
+ }
+
+ .jumbotron div{
+   text-align: center;
+   padding: 10px;
+   display: block;
+   margin: 50px;
+ }
+
+ .jumbotron div input{
+   display: inline;
+ }
+
+ app-root {
+   background: rgb(255,255,255);
+   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(184,178,255,1) 100%);}
+
+ input[type=submit]:hover{
+   transition: 0.1s;
+   transform: scale(1.05);
+ }
+
+ .plan:hover {
+  transition: 0.4s;
+   transform: scale(1.1);
+ }
+
+ @font-face {
+  font-family: 'Roboto';
+  src: url('font/Roboto-Regular.ttf') format('truetype'); /* IE9 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(92,175,254,1) 100%);
+  text-align: center;
+}
+
+input {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+input:hover {
+  border: 1px solid black;
+  transition: 0.5s;
+}
+
+button {
+  border-radius: 20px;
+  padding: 10px;
+}
+button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.title {
+  text-align: left;
+  background-color: #343A40;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px grey;
+  margin-bottom: 5%;
+
+  }

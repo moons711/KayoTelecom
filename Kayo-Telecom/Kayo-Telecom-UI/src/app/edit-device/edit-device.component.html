@@ -1,0 +1,24 @@
+<h1 class="title">Edit Device</h1>
+
+<div class="jumbotron text-center">
+    <form [formGroup]="deviceForm" (ngSubmit)="save()">
+
+        <div class="text-center">
+            <label for="device-name">Device Name: </label>
+            <input id="device-name" type="text" formControlName="deviceName" required />
+            <br>
+        </div>
+        <div class="text-center">
+            <label for="device-holder">Device Holder:</label>
+            <input id="device-holder" type="text" formControlName="deviceHolder" required />
+            <br>
+        </div>
+        <div class="text-center">
+            <label for="phone-number">Phone Number: </label>
+            <input id="phone-number" type="text" formControlName="phoneNumber" required />
+            <br>
+        </div>
+
+        <button class="text-center" type="submit" [disabled]="!deviceForm.valid">Save</button>
+    </form>
+</div>

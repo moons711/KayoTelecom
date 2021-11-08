@@ -1,1 +1,30 @@
-<p>myaccount works!</p>
+
+
+
+  <br>
+  <h1 class="title">My Subscriptions <p style="text-align: right; display: inline; float: right;">${{  bill }}</p></h1>
+
+<div class="acc" *ngFor="let sub of subscriptions; let i = index" >
+
+      <h1>Plan: {{  sub.plan.name }}</h1>
+      <h2>{{  sub.plan.description }}</h2>
+      <h2>Bandwidth: {{  sub.plan.bandwidthLimit }}</h2>
+
+      <div class="mini" *ngFor="let dev of sub.devices" >
+
+        <h1>{{  dev.deviceHolder }}'s {{  dev.deviceName }}</h1>
+        <h2>{{  dev.phoneNumber }}</h2>
+
+        <div class="mini2">
+          <a class="edit" routerLink="/editdevice" (click)="placeDevice(dev)" routerLinkActive="active">Edit Device</a>
+          <a class="delete" (click)="deleteDevice(dev.id)" routerLinkActive="active">Delete Device</a>
+
+        </div>
+
+  </div>
+  <a class="create" *ngIf="sub.plan.devices > sub.devices.length" routerLink="/createdevice" (click)="createDevice(sub.id)" routerLinkActive="active">Add Device</a>
+
+  <h1 class="pri" >${{  sub.plan.price }}</h1>
+  <a class="deletesub" (click)="deleteSub(i)" routerLinkActive="active">Delete Subscription</a>
+
+</div>

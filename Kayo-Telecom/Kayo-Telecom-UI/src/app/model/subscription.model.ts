@@ -4,13 +4,16 @@ import { User } from "./user.model";
 
 export class Subscription {
     id: number = 0;
-    plan: Plan;
-    user: User;
+    planId: number;
+    userId: number;
     devices: Device[];
+    plan: Plan;
 
-    constructor(plan: Plan, user:User, devices:Device[]){
-        this.plan = plan;
-        this.user = user;
+    constructor(id: number,planId: number, userId:number, devices: Device[], plan: Plan){
+        this.id = id;
+        this.planId = planId;
+        this.userId = userId;
         this.devices = devices;
+        this.plan = plan;
     }
 }

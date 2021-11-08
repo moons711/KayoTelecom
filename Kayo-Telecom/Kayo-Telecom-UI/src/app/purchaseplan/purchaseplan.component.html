@@ -1,11 +1,11 @@
 <div class="text-center">
-    <h1>All Plans</h1>
+  <h1 class="title">All Plans</h1>
 
     <ul class="list-group list-group-horizontal text-center">
         <li *ngFor="let plan of planList">
-            <div class="plan">
+            <div class="plan" (click)="addPlanToUser(plan.id)">
                 <h1>${{ plan.price }}</h1>
-                
+
                 <h2>{{ plan.name }}</h2>
 
                 <h4>{{ plan.description }}</h4>

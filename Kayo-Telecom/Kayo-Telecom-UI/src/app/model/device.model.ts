@@ -2,13 +2,15 @@ import { Subscription } from "./subscription.model";
 
 export class Device {
     id: number = 0;
-    subscription: Subscription;
-    name: string;
+    subscriptionId: number;
+    deviceName: string;
+    deviceHolder: string;
     phoneNumber: string;
 
-    constructor(subscription: Subscription, name: string, phoneNumber: string){
-        this.subscription = subscription;
-        this.name = name;
+    constructor(subscriptionId: number, deviceName: string, deviceHolder: string, phoneNumber: string){
+        this.subscriptionId = subscriptionId;
+        this.deviceName = deviceName;
+        this.deviceHolder = deviceHolder;
         this.phoneNumber = phoneNumber;
     }
 }

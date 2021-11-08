@@ -1,7 +1,10 @@
-<div class="jumbotron">
-    <h2 class="text-center">Register</h2>
+<br>
+<h1 class="title">Register</h1>
+
+
+<div class="jumbotron text-center">
     <form id="new-user" (ngSubmit)="save(); userForm.reset()" #userForm >
-        <div class="form-group">
+        <div class="text-center">
             <label for="First Name">First Name</label>
             <input [(ngModel)]="newUser.firstName" name="First Name" class="form-control" id="FirstName" type="text" required maxlength="30" #FirstName="ngModel" />
             <div class="alert" *ngIf="FirstName.invalid && (FirstName.dirty || FirstName.touched)">
@@ -9,7 +12,7 @@
                 <div *ngIf="FirstName.errors?.maxlength">First Name cannot be more than 30 characters</div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="text-center">
             <label for="Last Name">Last Name</label>
             <input [(ngModel)]="newUser.lastName" name="Last Name" class="form-control" id="LastName" type="text" required maxlength="30" #LastName="ngModel" />
             <div class="alert" *ngIf="LastName.invalid && (LastName.dirty || LastName.touched)">
@@ -17,7 +20,7 @@
                 <div *ngIf="LastName.errors?.maxlength">Last Name cannot be more than 30 characters</div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="text-center">
             <label for="Email">Email</label>
             <input [(ngModel)]="newUser.email" name="Email" class="form-control" id="Email" type="text" required maxlength="50" #Email="ngModel" />
             <div class="alert" *ngIf="Email.invalid && (Email.dirty || Email.touched)">
@@ -25,15 +28,7 @@
                 <div *ngIf="Email.errors?.maxlength">Email cannot be more than 50 characters</div>
             </div>
         </div>
-        <div class="form-group">
-            <label for="Phone Number">Phone Number</label>
-            <input [(ngModel)]="newUser.phoneNumber" name="Phone Number" class="form-control" id="PhoneNumber" type="text" required maxlength="10" #PhoneNumber="ngModel" />
-            <div class="alert" *ngIf="PhoneNumber.invalid && (PhoneNumber.dirty || PhoneNumber.touched)">
-                <div *ngIf="PhoneNumber.errors?.required">Phone Number is required</div>
-                <div *ngIf="PhoneNumber.errors?.maxlength">Phone Number cannot be more than 10 digits</div>
-            </div>
-        </div>
-        <div class="form-group">
+        <div class="text-center">
             <label for="Password">Password</label>
             <input [(ngModel)]="newUser.password" name="Password" class="form-control" id="Password" type="password" required maxlength="50" #Password="ngModel" />
             <div class="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)">
