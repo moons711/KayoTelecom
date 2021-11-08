@@ -38,8 +38,29 @@ namespace Kayo_Telecom.Api.Controllers
             {
                 return NotFound();
             }
-
+            user.Password = "";
             return user;
+        }
+
+        // GET: api/Users/5
+        [HttpGet("{username}/{password}")]
+        public async Task<ActionResult<int>> CheckPassword(string username, string password)
+        {
+            var user = await _context.Users.Where(u => u.Email == username).FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return -1;
+            }
+            else
+            {
+                if(user.Password == password)
+                {
+                    return user.Id;
+                }
+            }
+
+            return -1;
         }
 
         // PUT: api/Users/5

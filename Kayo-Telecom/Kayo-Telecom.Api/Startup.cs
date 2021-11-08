@@ -57,9 +57,9 @@ namespace Kayo_Telecom.Api
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Kayo_Telecom.Api v1"));
-                app.UseCors();
 
             }
+            app.UseCors();
 
             app.UseHttpsRedirection();
 

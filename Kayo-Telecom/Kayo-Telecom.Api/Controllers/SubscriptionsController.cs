@@ -42,6 +42,19 @@ namespace Kayo_Telecom.Api.Controllers
             return subscription;
         }
 
+        [HttpGet("user/{id}")]
+        public async Task<ActionResult<IEnumerable<Subscription>>> GetUserSubscription(int id)
+        {
+            var subscription = await _context.Subscriptions.Where(p => p.UserId == id).ToListAsync();
+
+            if (subscription == null)
+            {
+                return NotFound();
+            }
+
+            return subscription;
+        }
+
         // PUT: api/Subscriptions/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

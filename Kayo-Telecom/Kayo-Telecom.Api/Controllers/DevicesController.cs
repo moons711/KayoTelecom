@@ -30,9 +30,9 @@ namespace Kayo_Telecom.Api.Controllers
 
         // GET: api/Devices/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Device>> GetDevice(int id)
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevice(int id)
         {
-            var device = await _context.Devices.FindAsync(id);
+            var device = await _context.Devices.Where(p => p.SubscriptionId == id).ToListAsync();
 
             if (device == null)
             {
@@ -78,10 +78,26 @@ namespace Kayo_Telecom.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Device>> PostDevice(Device device)
         {
+            if(device.PhoneNumber.Equals("-1"))
+            {
+                device.PhoneNumber = GenerateNumber();
+            }
             _context.Devices.Add(device);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetDevice", new { id = device.Id }, device);
+        }
+
+        private string GenerateNumber()
+        {
+            Random random = new Random();
+            string r = "";
+            int i;
+            for (i = 1; i < 11; i++)
+            {
+                r += random.Next(0, 9).ToString();
+            }
+            return r;
         }
 
         // DELETE: api/Devices/5

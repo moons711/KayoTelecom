@@ -36,13 +36,11 @@ namespace Kayo_Telecom.Data
             //modelBuilder.Entity<Home>()
             //            .HasOne(h => h.Owner)
             //            .WithMany(o => o.Homes); this is how you define a one to many relationship
-            modelBuilder.Entity<User>().HasMany(p => p.Subscriptions);
+            modelBuilder.Entity<User>().HasMany(p => p.Subscriptions).WithOne(u => u.User).HasForeignKey(p => p.UserId);
+            modelBuilder.Entity<Plan>().HasMany(p => p.Subscriptions).WithOne(u => u.Plan).HasForeignKey(p => p.PlanId);
 
-            modelBuilder.Entity<Subscription>().HasOne(p => p.Plan);
-            modelBuilder.Entity<Subscription>().HasOne(p => p.User);
-            modelBuilder.Entity<Subscription>().HasMany(p => p.Devices);
 
-            modelBuilder.Entity<Device>().HasOne(p => p.Subscription);
+            modelBuilder.Entity<Device>().HasOne(p => p.Subscription).WithMany(p =>p.Devices).HasForeignKey(p => p.SubscriptionId);
 
             //modelBuilder.Entity<Song>().ToTable("Music"); //if the table name did not match the class name
             //modelBuilder.Entity<ViewClass>().HasNoKey().ToView("ViewName"); //How to setup  a view

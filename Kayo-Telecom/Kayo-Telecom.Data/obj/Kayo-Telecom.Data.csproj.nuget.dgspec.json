@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj": {}
+    "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj": {
+    "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj",
+        "projectUniqueName": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj",
         "projectName": "Kayo-Telecom.Data",
-        "projectPath": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj",
-        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Data\\obj\\",
+        "projectPath": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Data\\Kayo-Telecom.Data.csproj",
+        "packagesPath": "C:\\Users\\moros\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moros\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj": {
-                "projectPath": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj"
+              "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj": {
+                "projectPath": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj"
               }
             }
           }
@@ -82,20 +82,20 @@
         }
       }
     },
-    "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj": {
+    "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj",
         "projectName": "Kayo-Telecom.Domain",
-        "projectPath": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj",
-        "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\super\\Downloads\\example\\Kayo-Telecom\\Kayo-Telecom\\Kayo-Telecom.Domain\\obj\\",
+        "projectPath": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Domain\\Kayo-Telecom.Domain.csproj",
+        "packagesPath": "C:\\Users\\moros\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\moros\\Desktop\\Kayo-Telecom-Azure\\Kayo-Telecom-Back-End\\Kayo-Telecom.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moros\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
